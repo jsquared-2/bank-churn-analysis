@@ -1,0 +1,13 @@
+# Specifying Compose Specification Version
+version: "3.8"
+
+# Defining Services
+services:
+  server:
+    build:
+      context: .
+      dockerfile: docker/local.dockerfile
+    ports:
+      - "8888:8888"
+    image: bank-churn-notebook
+    container_name: notebook-server
