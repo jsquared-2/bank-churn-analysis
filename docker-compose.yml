@@ -4,10 +4,10 @@ version: "3.8"
 # Defining Services
 services:
   server:
+    container_name: notebook-server
     build:
       context: .
       dockerfile: docker/local.dockerfile
+    image: bank-churn-notebook
     ports:
       - "8888:8888"
-    image: bank-churn-notebook
-    container_name: notebook-server
